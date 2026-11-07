@@ -1,0 +1,11 @@
+<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#e6eae3"><title>온 세상이 ENTJ라면?</title><link rel="stylesheet" href="/style.css"><script type="importmap">{"imports":{"three":"/vendor/three.js","three/addons/":"/vendor/addons/"}}</script></head><body>
+<main id="world" aria-label="ENTJ 마을 3D 화면"></main><div id="labels"></div>
+<header id="hud" hidden><div class="roomcard"><span class="eyebrow">ENTJ VILLAGE · PROTOTYPE</span><strong>온 세상이 ENTJ라면?</strong><small><i id="connectionDot"></i><span id="room">연결 중</span> · <span id="population">0 / 10명</span></small></div><div class="wallet"><span>오늘 번 돈</span><strong id="money">0<span>원</span></strong><small id="date"></small></div></header>
+<div id="connection" hidden role="status"></div>
+<nav id="toolbar" hidden aria-label="교류 메뉴"><div class="socialdock"><button data-panel="speech"><span>···</span>말풍선</button><button data-panel="gesture"><span>✋</span>몸짓</button></div><button data-panel="rank"><span>▤</span>랭킹</button><button id="exitButton"><span>↗</span>퇴장</button></nav>
+<div id="hint" hidden>바닥을 눌러 이동하고, 가게의 빈 자리를 눌러 일하세요.</div>
+<section id="activity" hidden aria-live="polite"></section>
+<section id="popover" hidden></section>
+<div id="toast" hidden role="status"></div>
+<div id="entry" class="veil"><section class="entrycard"><h1>온 세상이<br><em>ENTJ</em>라면?</h1><form id="entryForm"><label for="nickname">마을에서 사용할 이름</label><input id="nickname" name="nickname" maxlength="12" autocomplete="nickname" placeholder="닉네임 · 최대 12자"><button id="enterButton" type="submit" class="primary">마을 입장하기 <span>→</span></button><button type="button" id="guestButton" class="quiet">이름 없이 게스트로 입장</button></form><p class="entrynote">같은 브라우저에서 오늘 번 돈이 유지돼요.</p><small class="prototype">기본 도형 프로토타입 · 아트 적용 전</small><p id="entryStatus" role="status" aria-live="polite"></p><p id="entryError" role="alert"></p><button id="retryButton" class="primary" hidden>다시 시도</button></section></div>
+<script type="module" src="/main.mjs"></script></body></html>

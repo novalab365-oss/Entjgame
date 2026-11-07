@@ -1,0 +1,10 @@
+services:
+  village:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - village-data:/app/data
+volumes:
+  village-data:

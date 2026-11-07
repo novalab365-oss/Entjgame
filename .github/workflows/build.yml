@@ -1,0 +1,29 @@
+name: Requested prototype build
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: entj-village-server-build
+          path: |
+            dist/
+            server/
+            shared/
+            package.json
+            package-lock.json
+            Dockerfile
+            compose.yaml
+            README.md
